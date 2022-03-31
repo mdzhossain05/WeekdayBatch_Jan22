@@ -1,0 +1,30 @@
+package constructoe;
+
+public class AddIntNumbers {
+	int numOne;
+	int numTwo;
+
+	public void addTwoNumbers(int numberOne, int numberTwo) {
+		numOne = numberOne;
+		numTwo = numberTwo;
+		int sum = numOne + numTwo;
+		System.out.println(sum);
+	}
+	
+	public void addThreeNumbers(int numberOne, int numberTwo, int numberThree) {
+		int sum = numberOne + numberTwo + numberThree;
+		System.out.println(sum);	
+	}
+	
+	public void addFourNumbers(int numberOne, int numberTwo, int numberThree, int numberFour) {
+		int sum = numberOne + numberTwo + numberThree + numberFour;
+		System.out.println(sum);
+	}
+	
+	public int addNumbers() {
+		int sum = 10 + 15;
+		return sum;
+	}
+	
+
+}

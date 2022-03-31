@@ -1,0 +1,26 @@
+package constructor;
+
+public class LearningReturnType {
+
+	public static void main(String[] args) {
+		
+		AddIntNumbers ain = new AddIntNumbers();
+		ain.addTwoIntNumbers(10, 20);
+		ain.addThreeIntNumbers(10, 20, 30);
+		
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

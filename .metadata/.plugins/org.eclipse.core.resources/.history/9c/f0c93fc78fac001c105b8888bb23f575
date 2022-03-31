@@ -1,0 +1,16 @@
+package constructor;
+
+public class AddIntNumbers {
+	int numOne;
+	int numTwo;
+	
+	public void addTwoIntNumbers(int numberOne, int numberTwo) {
+		numOne = numberOne;
+		numTwo = numberTwo;
+		
+		int sum = numOne + numTwo;
+		System.out.println(sum);
+	}
+	
+
+}

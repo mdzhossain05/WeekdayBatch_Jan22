@@ -1,0 +1,23 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class LoginPage {
+	public void usernameTextbox(WebDriver driver, String userName) {
+		WebElement userNameTextbox = driver.findElement(By.xpath("//*[@id='user-name']"));
+		userNameTextbox.sendKeys(userName);
+	}
+	
+	public void passwordTextbox(WebDriver driver) {
+		WebElement passwordTextbox = driver.findElement(By.xpath("//*[@id=\"password\"]"));
+		passwordTextbox.sendKeys("secret_sauce");
+	}
+	
+	public void signinButton(WebDriver driver) {
+		WebElement signinButton = driver.findElement(By.xpath("//*[@id=\"login-button\"]"));
+		signinButton.click();
+	}
+
+}

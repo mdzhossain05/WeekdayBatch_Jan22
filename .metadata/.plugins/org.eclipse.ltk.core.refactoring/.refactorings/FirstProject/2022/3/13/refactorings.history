@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;PageObjectProject/src/constructoe&apos;&#x0D;&#x0A;- Original project: &apos;FirstProject&apos;&#x0D;&#x0A;- Destination element: &apos;PageObjectProject/src/constructoe&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     functionLearning.AddIntNumbers.java&#x0D;&#x0A;     functionLearning.LearningReturnType.java" description="Copy compilation units" destination="=PageObjectProject/src&lt;constructoe" element1="/src&lt;functionLearning{AddIntNumbers.java" element2="/src&lt;functionLearning{LearningReturnType.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1648170415395" units="2" version="1.0"/>
+</session>
