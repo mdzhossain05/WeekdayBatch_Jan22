@@ -44,19 +44,7 @@ public class AutomationPratice {
 		
 		HomePage hp = new HomePage();
 		hp.signinButton(driver).click();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			
 //		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String expectedCreateAccountText = "CREATE AN ACCOUNT";
 		
@@ -69,18 +57,13 @@ public class AutomationPratice {
 		}else {
 			System.out.println("test fail");
 		}
-		
-		
+			
 //		WebElement emailTextBox = driver.findElement(By.id("email_create"));
 //		emailTextBox.sendKeys("aksfnlan@gmail.com");
 		
 		SigninPage sp = new SigninPage();
 		sp.emailCreateTextbox(driver).sendKeys("aksfnlan@gmail.com");
-		
-		
-		
-		
-		
+	
 //		boolean emailText = emailTextBox.isDisplayed();
 //		
 //		System.out.println(emailText);
@@ -105,25 +88,6 @@ public class AutomationPratice {
 		Select selectMonth = new Select(month);
 		selectMonth.selectByValue("3");
 
-			
-		
-		
-		
-		
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			
 //		driver.navigate().back();
 //		driver.navigate().forward();
