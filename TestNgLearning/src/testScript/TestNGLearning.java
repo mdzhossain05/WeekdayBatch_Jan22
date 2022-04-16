@@ -15,7 +15,7 @@ public class TestNGLearning {
 		System.out.println("C");
 	}
 	
-	@Test()
+	@Test(dependsOnMethods = "B")
 	public void A() {
 		System.out.println("A");
 	}

@@ -3,15 +3,13 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="testScript.LoginScript">
+      <class name="testScritptTwo.StandardUser">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="problemUser"/>
-          <include name="lockedOutUser"/>
-          <include name="performanceGlitchUser"/>
           <include name="setupBrowser"/>
+          <include name="standaredUser"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testScript.LoginScript -->
+      </class> <!-- testScritptTwo.StandardUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

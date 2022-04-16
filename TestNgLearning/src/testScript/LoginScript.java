@@ -30,7 +30,8 @@ public class LoginScript {
  * @AfterSuite
  * 
  */
-	
+
+	// TestNG & Cucumber
 	
 	WebDriver driver;
 	
@@ -41,6 +42,13 @@ public class LoginScript {
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+		
+		@Test(priority = 5)
+		public void emptyUsernameAndPassword() {
+			WebElement loginButton = driver.findElement(By.id("login-button"));
+			loginButton.click();
+			
 		}
 
 		@Test(priority = 1)

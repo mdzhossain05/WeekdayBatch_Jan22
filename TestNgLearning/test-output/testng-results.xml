@@ -1,37 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="4" passed="4" failed="0" skipped="0">
+<testng-results total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-01T01:35:59Z" name="Default suite" finished-at="2022-04-01T01:36:23Z" duration-ms="24179">
+  <suite started-at="2022-04-16T16:24:53Z" name="Suite" finished-at="2022-04-16T16:25:35Z" duration-ms="41572">
     <groups>
     </groups>
-    <test started-at="2022-04-01T01:35:59Z" name="Default test" finished-at="2022-04-01T01:36:23Z" duration-ms="24179">
-      <class name="testScript.LoginScript">
-        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:testScript.LoginScript@6c61a903]" started-at="2022-03-31T21:35:59Z" name="setupBrowser" finished-at="2022-03-31T21:36:05Z" duration-ms="6226" status="PASS">
+    <test started-at="2022-04-16T16:24:53Z" name="TestTwo" finished-at="2022-04-16T16:25:32Z" duration-ms="39331">
+      <class name="testScritptTwo.StandardUser">
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:testScritptTwo.StandardUser@398dada8]" started-at="2022-04-16T12:24:53Z" name="setupBrowser" finished-at="2022-04-16T12:25:13Z" duration-ms="19657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method signature="standaredUser()[pri:1, instance:testScript.LoginScript@6c61a903]" started-at="2022-03-31T21:36:05Z" name="standaredUser" finished-at="2022-03-31T21:36:07Z" duration-ms="2048" status="PASS">
+        <test-method signature="standaredUser(java.lang.String, java.lang.String)[pri:1, instance:testScritptTwo.StandardUser@398dada8]" started-at="2022-04-16T12:25:13Z" name="standaredUser" finished-at="2022-04-16T12:25:22Z" duration-ms="9103" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secre]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at testScritptTwo.StandardUser.standaredUser(StandardUser.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:393)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- standaredUser -->
-        <test-method signature="lockedOutUser()[pri:2, instance:testScript.LoginScript@6c61a903]" started-at="2022-03-31T21:36:07Z" name="lockedOutUser" finished-at="2022-03-31T21:36:09Z" duration-ms="1985" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lockedOutUser -->
-        <test-method signature="problemUser()[pri:3, instance:testScript.LoginScript@6c61a903]" started-at="2022-03-31T21:36:09Z" name="problemUser" finished-at="2022-03-31T21:36:11Z" duration-ms="1401" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- problemUser -->
-        <test-method signature="performanceGlitchUser()[pri:4, instance:testScript.LoginScript@6c61a903]" started-at="2022-03-31T21:36:11Z" name="performanceGlitchUser" finished-at="2022-03-31T21:36:17Z" duration-ms="6119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- performanceGlitchUser -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScript.LoginScript@6c61a903]" started-at="2022-03-31T21:36:17Z" name="closeBrowser" finished-at="2022-03-31T21:36:23Z" duration-ms="6352" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScritptTwo.StandardUser@398dada8]" started-at="2022-04-16T12:25:22Z" name="closeBrowser" finished-at="2022-04-16T12:25:32Z" duration-ms="10523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testScript.LoginScript -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testScritptTwo.StandardUser -->
+    </test> <!-- TestTwo -->
+    <test started-at="2022-04-16T16:24:53Z" name="TestThree" finished-at="2022-04-16T16:25:34Z" duration-ms="40798">
+      <class name="testScritptTwo.LockedOutUser">
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:testScritptTwo.LockedOutUser@1ef6d34c]" started-at="2022-04-16T12:24:53Z" name="setupBrowser" finished-at="2022-04-16T12:25:13Z" duration-ms="19902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="standaredUser()[pri:1, instance:testScritptTwo.LockedOutUser@1ef6d34c]" started-at="2022-04-16T12:25:13Z" name="standaredUser" finished-at="2022-04-16T12:25:20Z" duration-ms="6465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- standaredUser -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScritptTwo.LockedOutUser@1ef6d34c]" started-at="2022-04-16T12:25:20Z" name="closeBrowser" finished-at="2022-04-16T12:25:34Z" duration-ms="14407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testScritptTwo.LockedOutUser -->
+    </test> <!-- TestThree -->
+    <test started-at="2022-04-16T16:24:53Z" name="TestOne" finished-at="2022-04-16T16:25:34Z" duration-ms="41139">
+      <class name="testScritptTwo.ProblemUser">
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:testScritptTwo.ProblemUser@704deff2]" started-at="2022-04-16T12:24:53Z" name="setupBrowser" finished-at="2022-04-16T12:25:13Z" duration-ms="19669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="standaredUser(java.lang.String, java.lang.String)[pri:1, instance:testScritptTwo.ProblemUser@704deff2]" started-at="2022-04-16T12:25:13Z" name="standaredUser" finished-at="2022-04-16T12:25:22Z" duration-ms="9492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- standaredUser -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScritptTwo.ProblemUser@704deff2]" started-at="2022-04-16T12:25:22Z" name="closeBrowser" finished-at="2022-04-16T12:25:34Z" duration-ms="11947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testScritptTwo.ProblemUser -->
+    </test> <!-- TestOne -->
+    <test started-at="2022-04-16T16:24:53Z" name="TestFour" finished-at="2022-04-16T16:25:35Z" duration-ms="41569">
+      <class name="testScritptTwo.PerformanceGlitchUser">
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:testScritptTwo.PerformanceGlitchUser@6fa34d52]" started-at="2022-04-16T12:24:53Z" name="setupBrowser" finished-at="2022-04-16T12:25:15Z" duration-ms="21878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="standaredUser()[pri:1, instance:testScritptTwo.PerformanceGlitchUser@6fa34d52]" started-at="2022-04-16T12:25:15Z" name="standaredUser" finished-at="2022-04-16T12:25:28Z" duration-ms="13363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- standaredUser -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testScritptTwo.PerformanceGlitchUser@6fa34d52]" started-at="2022-04-16T12:25:28Z" name="closeBrowser" finished-at="2022-04-16T12:25:35Z" duration-ms="6305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testScritptTwo.PerformanceGlitchUser -->
+    </test> <!-- TestFour -->
+  </suite> <!-- Suite -->
 </testng-results>
