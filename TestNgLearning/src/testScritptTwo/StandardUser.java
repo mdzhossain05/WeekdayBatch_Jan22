@@ -41,7 +41,7 @@ public class StandardUser {
 		
 		boolean usernameDisplayed = usernameTextbox.isDisplayed();
 		
-		Assert.assertTrue(usernameDisplayed);
+		Assert.assertTrue(usernameTextbox.isDisplayed());
 		
 //		SoftAssert sa = new SoftAssert();
 //		sa.assertTrue(usernameDisplayed);
