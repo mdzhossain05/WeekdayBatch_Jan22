@@ -4,21 +4,31 @@ Description: sldjfsdg
 
 Background: 
 
-Given user is in login page
+Given user is in login page using "<browser>"
 
-Scenario: login with standard user
+
+Scenario Outline: login with standard user
 
 #Given user is in login page
-When user insert username
-When user insert password
+When user insert username "<username>"
+When user insert password "<password>"
 And user click on login button
 Then user should be able to login
 
+Examples: 
 
-Scenario: login with problem user
+|username|password|browser|
+|problem_user|secret_sauce|chrome|
+|statndard_user|secret_sauce|firefox|
+
+
+
+#Scenario: login with problem user
 
 #Given user is in login page
-When user insert username problem user
-When user insert password
-And user click on login button
-Then user should be able to login
+#When user insert username problem user
+#When user insert password
+#And user click on login button
+#Then user should be able to login
+
+

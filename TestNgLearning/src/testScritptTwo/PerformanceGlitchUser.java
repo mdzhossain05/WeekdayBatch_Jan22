@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class PerformanceGlitchUser {
@@ -24,12 +25,13 @@ public class PerformanceGlitchUser {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
+	@Parameters({"userName", "password"})
 	@Test(priority = 1)
-	public void standaredUser() {
+	public void standaredUser(String username, String password) {
 		WebElement usernameTextbox = driver.findElement(By.id("user-name"));
-		usernameTextbox.sendKeys("performance_glitch_user");
+		usernameTextbox.sendKeys(username);
 		WebElement passwordTextbox = driver.findElement(By.id("password"));
-		passwordTextbox.sendKeys("secret_sauce");
+		passwordTextbox.sendKeys(password);
 		WebElement loginButton = driver.findElement(By.id("login-button"));
 		loginButton.click();
 	}

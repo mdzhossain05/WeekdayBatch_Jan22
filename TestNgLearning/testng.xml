@@ -6,33 +6,8 @@
    <parameter name="password" value="secret_sauce" />
     <classes>
       <class name="testScritptTwo.ProblemUser"/>
-    </classes>
-  </test> <!-- Test -->
-
-
-<test thread-count="5" name="TestTwo">
-   <parameter name="userName" value="standard_user" />
-   <parameter name="password" value="secre" />
-    <classes>
-      <class name="testScritptTwo.StandardUser"/>
-    </classes>
-  </test> <!-- Test -->
-
-
-<test thread-count="5" name="TestThree">
-   <parameter name="userName" value="standard_user" />
-   <parameter name="password" value="secret_sauce" />
-    <classes>
-      <class name="testScritptTwo.LockedOutUser"/>
-    </classes>
-  </test> <!-- Test -->
-
-
-<test thread-count="5" name="TestFour">
-   <parameter name="userName" value="standar" />
-   <parameter name="password" value="secret_sauce" />
-    <classes>
-      <class name="testScritptTwo.PerformanceGlitchUser"/>
+      <class name="testScritptTwo.ProblemUser"/>
+      <class name="testScritptTwo.ProblemUser"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

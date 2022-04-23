@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="password" value="secret_sauce"/>
-  <parameter name="userName" value="standar"/>
-  <test parallel="tests" name="TestTwo(failed)">
-    <parameter name="password" value="secre"/>
-    <parameter name="userName" value="standard_user"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <test name="Test(failed)" parallel="none">
     <classes>
-      <class name="testScritptTwo.ProblemUser">
+      <class name="testScritptThree.StandardUser">
         <methods>
           <include name="setupBrowser"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testScritptTwo.ProblemUser -->
-      <class name="testScritptTwo.PerformanceGlitchUser">
+      </class> <!-- testScritptThree.StandardUser -->
+      <class name="testScritptThree.ProblemUser">
         <methods>
-          <include name="setupBrowser"/>
-          <include name="closeBrowser"/>
+          <include name="standaredUser"/>
         </methods>
-      </class> <!-- testScritptTwo.PerformanceGlitchUser -->
-      <class name="testScritptTwo.LockedOutUser">
+      </class> <!-- testScritptThree.ProblemUser -->
+      <class name="testScritptThree.PerformanceGlitchUser">
         <methods>
-          <include name="setupBrowser"/>
-          <include name="closeBrowser"/>
+          <include name="standaredUser"/>
         </methods>
-      </class> <!-- testScritptTwo.LockedOutUser -->
-      <class name="testScritptTwo.StandardUser">
+      </class> <!-- testScritptThree.PerformanceGlitchUser -->
+      <class name="testScritptThree.LockedOutUser">
         <methods>
-          <include name="setupBrowser"/>
-          <include name="standaredUser" invocation-numbers="0"/>
-          <include name="closeBrowser"/>
+          <include name="standaredUser"/>
         </methods>
-      </class> <!-- testScritptTwo.StandardUser -->
+      </class> <!-- testScritptThree.LockedOutUser -->
     </classes>
-  </test> <!-- TestTwo(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
