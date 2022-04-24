@@ -6,7 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
 import cucumber.api.java.After;
@@ -14,9 +16,11 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pageObjects.LoginPage;
 
 public class StepDefinition {
 	WebDriver driver;
+	LoginPage lp;
 	
 	@Before
 	public void anyBeforeTask() {
@@ -26,20 +30,24 @@ public class StepDefinition {
 	@Given("^user is in login page using \"([^\"]*)\"$")
 	public void user_is_in_login_page_using(String browser) throws Throwable {
 		
-		if(browser.equals("chrome")) {
+		if(browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\zakir\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}else if(browser.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\zakir\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\zakir\\Downloads\\geckodriver-v0.20.0-win64\\geckodriver.exe");
 			driver = new FirefoxDriver();
-		}else {
+		}else if(browser.equals("safari")){
 			System.setProperty("webdriver.safari.driver", "C:\\Users\\zakir\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
 			driver = new SafariDriver();
+		}else if(browser.equals("edge")) {
+			System.setProperty("webdriver.edge.driver", "C:\\Users\\zakir\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+			driver = new EdgeDriver();
 		}
 
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		lp = new LoginPage(driver);
 	}
 	
 	@Given("^user is in login page$")
@@ -88,8 +96,7 @@ public class StepDefinition {
 
 	@When("^user click on login button$")
 	public void user_click_on_login_button() throws Throwable {
-		WebElement loginButton = driver.findElement(By.id("login-button"));
-		loginButton.click();
+		lp.signinButton().click();
 	}
 
 	@Then("^user should be able to login$")
@@ -100,19 +107,17 @@ public class StepDefinition {
 	//hooks
 	@After
 	public void anyAfterTask() {
-		driver.quit();
+		driver.close();
 	}
 
 	@When("^user insert username \"([^\"]*)\"$")
 	public void user_insert_username(String username) throws Throwable {
-		WebElement usernameTextbox = driver.findElement(By.id("user-name"));
-		usernameTextbox.sendKeys(username);
+		lp.usernameTextbox().sendKeys(username);
 	}
 	
 	@When("^user insert password \"([^\"]*)\"$")
 	public void user_insert_password(String password) throws Throwable {
-		WebElement usernameTextbox = driver.findElement(By.id("password"));
-		usernameTextbox.sendKeys(password);
+		lp.passwordTextbox().sendKeys(password);
 	}
 
 }

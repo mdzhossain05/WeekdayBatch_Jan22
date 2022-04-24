@@ -1,0 +1,39 @@
+1. Abstraction
+2. Polymorphism
+3. Inheritance
+4. Encapsulation
+
+APIE -- OOP
+
+1. Abstraction -- To stop creating any object of a class
+2. Polymorphism -- Runtime Polymorphism  -  Complietime Polymorphism
+		    Method Over Riding   -  Method Over Loading
+3. Inheritance -- Relationship between parent and child - one way - parent to child
+4. Encapsulation -- Hiding varaibles and fuctions
+
+public - any one can access - any class, any class from packages
+
+private - Only accessable within the same class
+
+protected - is accessable only if you have parent child relationship or you create a obj or within the same package
+
+default - with in the same package
+
+
+git init
+
+git clone
+
+git status
+
+git add .
+
+git commit -m "any message"
+
+git push -u origin zakir
+
+git pull origin master/main
+
+
+
+

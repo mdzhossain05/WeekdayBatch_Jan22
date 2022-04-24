@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel = "tests">
+<suite name="Suite">
   <test thread-count="5" name="TestOne">
-   <parameter name="userName" value="standard_user" />
-   <parameter name="password" value="secret_sauce" />
+  <groups>
+  	<run>
+  		<include name = "smoke"/>
+  	</run>
+  </groups>
     <classes>
-      <class name="testScritptTwo.ProblemUser"/>
-      <class name="testScritptTwo.ProblemUser"/>
-      <class name="testScritptTwo.ProblemUser"/>
+      <class name="testScript.TestNGLearning"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
