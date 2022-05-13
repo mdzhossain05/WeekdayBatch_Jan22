@@ -1,6 +1,15 @@
 package packageTwo;
 
 public class Human extends Animal {
+	
+	public Human() {
+		
+	}
+	
+	public Human(int a) {
+		
+	}
+	
 	public void eat() {
 		System.out.println("eat - breakfast, lunch, dinner");
 	}

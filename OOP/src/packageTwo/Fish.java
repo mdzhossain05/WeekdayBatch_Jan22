@@ -1,13 +1,16 @@
 package packageTwo;
 
-public class Fish extends Animal{
-	public void eat() {
+public class Fish{
+	
+	private int a = 10;
+	
+	private void eat() {
 		System.out.println("eat fish");
 	}
 
 	
 	
-	public void sleep() {
+	void sleep() {
 		System.out.println("sleep with open eyes");
 	}
 	

@@ -1,0 +1,79 @@
+Workbanches from different companies
+
+Microsoft SQL Server
+
+MY SQL
+
+Oracle
+
+Teradata
+
+
+What ever we write to get the information we call that a query
+
+
+select customerid, customerName, contactName, Address, City, postalCode, country
+
+from customers
+
+where
+
+distinct
+
+and, or, not
+
+order by
+
+top
+
+max(), min()
+
+count(), avg(), sum()
+
+alias
+
+Group by
+
+In
+
+Betwen
+
+Join
+
+
+
+
+
+Joins
+
+inner join
+left join
+right join
+full outer join
+
+
+find out customers with customer id from 30 to 60
+from brazil country and madrid city
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

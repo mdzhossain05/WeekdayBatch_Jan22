@@ -1,0 +1,23 @@
+API
+
+Workspace -> Environment -> Collection ->
+Request
+
+
+Methods
+
+Get
+Post
+Put
+Delete
+
+Status Codes
+200
+201
+204
+300
+400
+401
+403
+404
+500

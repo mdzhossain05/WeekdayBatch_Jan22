@@ -10,8 +10,7 @@ public class MainRun {
 		
 		human.eat();
 		human.eat("Bashmati Rice");
-
-		fish.eat();
+		
 		fish.sleep();
 	}
 
